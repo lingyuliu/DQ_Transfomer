@@ -14,7 +14,6 @@ import importlib
 import torch.utils.data
 from torch.utils.data import DataLoader
 from data.base_dataset import BaseDataset
-from data.null_dataset import CelebData
 
 
 def find_dataset_using_name(dataset_name):

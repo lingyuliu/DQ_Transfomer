@@ -128,7 +128,7 @@ class Painter(nn.Module):
         self.sub_conv1 = nn.Conv1d(128, 256, 1, 1)
         self.sub_conv2 = nn.Conv1d(64, 8, 1, 1)
 
-        self.DQ_transformer = Transformer(hidden_dim, n_heads, n_enc_layers, n_dec_layers, batch_first=True)
+        self.DQ_transformer = nn.Transformer(hidden_dim, n_heads, n_enc_layers, n_dec_layers, batch_first=True)
         self.linear_param = nn.Sequential(
             nn.Linear(hidden_dim, hidden_dim),
             nn.ReLU(True),
